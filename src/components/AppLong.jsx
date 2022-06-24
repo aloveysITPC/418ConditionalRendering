@@ -13,7 +13,7 @@ function renderConditionally() {
   }
 }
 
-function App() {
+function AppLong() {
   return <div className="container">{renderConditionally()}</div>;
 }
 
