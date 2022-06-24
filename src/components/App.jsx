@@ -1,16 +1,24 @@
 import React from "react";
 
-function App() {
-  return (
-    <div className="container">
-      <h1>Hello</h1>
+var isLoggedIn = false;
+// since boolean can write it if (isLoggedIn);
+
+function renderConditionally() {
+  if (isLoggedIn === true) {
+    return <h1>Hello</h1>;
+  } else {
+    return (
       <form className="form">
         <input type="text" placeholder="Username" />
         <input type="password" placeholder="Password" />
         <button type="submit">Login</button>
       </form>
-    </div>
-  );
+    );
+  }
+}
+
+function App() {
+  return <div className="container">{renderConditionally()}</div>;
 }
 
 export default App;
